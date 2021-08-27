@@ -11,7 +11,7 @@ CMD ./gradlew assemble
 FROM amazoncorretto:11
 WORKDIR /opt/hello-spring
 RUN chmod 777 ./
-COPY --from=base /opt/hello-spring/builds/libs/hello-spring-1.0.0-SNAPSHOT.jar ./
+COPY --from=base /opt/hello-spring/build/libs/hello-spring-1.0.0-SNAPSHOT.jar ./
 
 #Deploy Stage
 CMD java -jar hello-spring-1.0.0-SNAPSHOT.jar
