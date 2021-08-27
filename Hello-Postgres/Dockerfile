@@ -3,7 +3,7 @@ FROM postgres:latest
 WORKDIR /opt/hello-postgre
 COPY ./ ./
 #COPY postgers.config /opt/hello-postgre/
-
+ENTRYPOINT [ "initdb" ]
 
  
 
