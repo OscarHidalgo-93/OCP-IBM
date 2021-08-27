@@ -10,6 +10,7 @@ CMD ./gradlew assemble
 #Runtime Stage
 FROM amazoncorretto:11
 WORKDIR /opt/hello-spring
+RUN chmod 777 ./
 COPY --from=base /opt/hello-spring/builds/libs/hello-spring-1.0.0-SNAPSHOT.jar ./
 
 #Deploy Stage
