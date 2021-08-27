@@ -14,4 +14,4 @@ EXPOSE 8000
 
 
 
-RUN docker run -it -rm -p 8000:8080 --name postgres-test -e POSTRESS_PASSWORD=password
+RUN docker run -it -rm -p 8000:8080 --name postgres-test 
