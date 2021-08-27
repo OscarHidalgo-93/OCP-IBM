@@ -4,7 +4,7 @@ WORKDIR /opt/hello-postgre
 COPY ./ ./
 #COPY postgers.config /opt/hello-postgre/
 
-ENV POSTGRES_DB=mydb
+
 ENV POSTGRES_USER=user
 ENV POSTGRES_PASSWORD=password
 
