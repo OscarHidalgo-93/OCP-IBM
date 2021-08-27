@@ -15,4 +15,4 @@ EXPOSE 8000
 
 
 
-CMD [ "postgres" ]
+ 
