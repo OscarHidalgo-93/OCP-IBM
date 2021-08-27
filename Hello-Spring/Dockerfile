@@ -5,7 +5,7 @@ FROM  openjdk:11 AS base
 WORKDIR /opt/hello-spring
 COPY ./ ./
 RUN chmod 777 ./
-RUN ./gradlew assemble
+CMD ./gradlew assemble
 
 #Runtime Stage
 FROM amazoncorretto:11
