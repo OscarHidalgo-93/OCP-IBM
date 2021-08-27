@@ -4,7 +4,10 @@ WORKDIR /opt/hello-postgre
 COPY ./ ./
 #COPY postgers.config /opt/hello-postgre/
 EXPOSE 8000
+ENV POSTGRES_DB=mydb
+ENV POSTGRES_USER=user
 ENV POSTGRES_PASSWORD=password
+
 VOLUME [ "/opt/hello-postgre" ]
 
 
