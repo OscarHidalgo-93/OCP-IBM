@@ -1,5 +1,5 @@
 
-FROM nginx:alpine
+FROM nginx:alpine as builder
 #COPY index.html /usr/share/nginx/html/index.html
 
 # Config Nginx para SPA
