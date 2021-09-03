@@ -2,10 +2,10 @@ package com.example.springapp;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 @SpringBootApplication
+@RestController
 public class SpringAppApplication {
 
     public static void main(String[] args) {
@@ -21,6 +21,16 @@ public class SpringAppApplication {
         }
 
     }
+
+    @RestController
+    public class FormController{
+
+        @RequestMapping("/greeting")
+        public String Index( ){
+            return "greeting";
+        }
+    }
+
     @RequestMapping("/suma")
 
     public @ResponseBody Float add(
@@ -29,21 +39,4 @@ public class SpringAppApplication {
 
         return a + b;
     }
-    @RestController
-    class FormController{
-        @RequestMapping("/greeting")
-        String greeting(Model model ){
-            model.addAttribute("greeting", new Greeting());
-            return "greetings";
-        }
-    }
-    @PostMapping("/greeting")
-
-    public String greetingSubmit(@ModelAttribute Greeting greeting) {
-
-        return "result";
-
-    }
-
-
 }
