@@ -9,4 +9,4 @@ COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 
 
-RUN ["nginx","-g","daemon off;"]
+RUN ["nginx","-g","daemon off";]
